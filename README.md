@@ -1,5 +1,3 @@
-# omnismtp-sendinblue
-
 # OmniSmtp-SendInBlue
 
 ###### An SMTP driver for OmniSmtp Processing library for PHP
