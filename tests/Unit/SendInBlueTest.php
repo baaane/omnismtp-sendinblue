@@ -10,11 +10,9 @@ class SendInBlueTest extends \SendInBlue\Tests\TestCase
     
     public function testSendInBlueEmail()
     {
-        $sendinblue = OmniSmtp::create(\OmniSmtp\SendInBlue::class);
+        $sendinblue = OmniSmtp::create(\OmniSmtp\SendInBlue::class, 'test-api-key');
 
-        $response = $sendinblue->setApiKey('test-api-key')
-                   ->setAuthorizationHearerName('api-key')
-                   ->setSubject('The Mail Subject')
+        $response = $sendinblue->setSubject('The Mail Subject')
                    ->setFrom([
                         'name' => 'John Doe',
                         'email' => 'john.doe@example.com'

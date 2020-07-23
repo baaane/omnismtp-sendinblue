@@ -7,6 +7,19 @@ use OmniSmtp\Common\AbstractProvider;
 class SendInBlue extends AbstractProvider
 {
 
+    public function __construct(string $apikey)
+    {
+        $this->setApiKey($apikey);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getAuthorizationHeaderName()
+    {
+        return $this->getData(self::AUTHORIZATION_NAME) ? $this->getData(self::AUTHORIZATION_NAME) : 'api-key';
+    }
+
     public function getSmtpEndpoint()
     {
         return 'https://api.sendinblue.com/v3/smtp/email';
