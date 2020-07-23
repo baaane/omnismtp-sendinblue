@@ -1,0 +1,29 @@
+{
+    "name": "omnismtp/sendinblue",
+    "description": "Sendinblue driver for SMTP processing library",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jeff Claud",
+            "email": "jeffclaud17@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "crazymeeks/omnismtp": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "OmniSmtp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SendInBlue\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5.0"
+    }
+}
