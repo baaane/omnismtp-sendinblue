@@ -7,11 +7,6 @@ use OmniSmtp\Common\AbstractProvider;
 class SendInBlue extends AbstractProvider
 {
 
-    public function __construct(string $apikey)
-    {
-        $this->setApiKey($apikey);
-    }
-
     /**
      * @inheritDoc
      */

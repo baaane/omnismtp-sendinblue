@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/crazymeeks/omnismtp.git",
-                "reference": "c5d90de7edc67cb2d9742cd92fd290b103eb309a"
+                "reference": "4cfe2c969d0bb6e53fc8e2dcdf181a723d6dd0d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/crazymeeks/omnismtp/zipball/c5d90de7edc67cb2d9742cd92fd290b103eb309a",
-                "reference": "c5d90de7edc67cb2d9742cd92fd290b103eb309a",
+                "url": "https://api.github.com/repos/crazymeeks/omnismtp/zipball/4cfe2c969d0bb6e53fc8e2dcdf181a723d6dd0d0",
+                "reference": "4cfe2c969d0bb6e53fc8e2dcdf181a723d6dd0d0",
                 "shasum": ""
             },
             "require": {
@@ -48,7 +48,7 @@
                 "PHP SMTP",
                 "php mail library"
             ],
-            "time": "2020-07-23T13:17:02+00:00"
+            "time": "2020-07-24T00:23:18+00:00"
         },
         {
             "name": "doctrine/inflector",
