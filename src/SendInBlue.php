@@ -20,6 +20,9 @@ class SendInBlue extends AbstractProvider
         return $this->getData(self::AUTHORIZATION_NAME) ? $this->getData(self::AUTHORIZATION_NAME) : 'api-key';
     }
 
+    /**
+     * @inheritDoc
+     */
     public function getSmtpEndpoint()
     {
         return 'https://api.sendinblue.com/v3/smtp/email';
@@ -28,17 +31,26 @@ class SendInBlue extends AbstractProvider
     /**
      * @inheritDoc
      */
-    public function setFrom(array $from)
+    public function setFrom(string $from)
     {
-        return $this->setData(self::FROM, ['sender' => $from]);
+        return $this->setData(self::FROM, ['sender' => ['email' => $from]]);
     }
 
     /**
      * @inheritDoc
      */
-    public function setRecipients(array $recipients)
+    public function setRecipients(...$recipients)
     {
-        return $this->setData(self::RECIPIENTS, ['to' => $recipients]);
+        $emails = [];
+        foreach($recipients as $recipient){
+            $emails[] = [
+                'email' => $recipient
+            ];
+
+            unset($recipient);
+        }
+
+        return $this->setData(self::RECIPIENTS, ['to' => $emails]);
     }
 
     /**
